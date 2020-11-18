@@ -1,27 +1,34 @@
 const mtk = 100;
-const bahasaIndonesia = 100;
-const bahasaInggris = 100;
-const ipa =  101;
+const bahasaIndonesia = 95;
+const bahasaInggris = 90;
+const ipa =  100;
 
 
 if(typeof(mtk)=='number' && typeof(bahasaIndonesia)=='number' && typeof(bahasaInggris)=='number' && typeof(ipa)=='number'){
   let jumlah = mtk+bahasaIndonesia+bahasaInggris+ipa;
   let rata = Math.ceil(jumlah/4);
-  console.log(rata);
-
-  if(rata>100){
-   console.log('Nilai diluar batas');
-  }else if(rata>=90){
-    console.log('A');
-  }else if(rata>=80){
-   console.log('B');
-  }else if(rata>=70){
-    console.log('C');
-  }else if(rata>=60){
-    console.log('D');
+  
+  if(mtk>=0 && mtk<=100 && bahasaIndonesia>=0 && bahasaIndonesia<=100 && bahasaInggris>=0 && bahasaInggris<=100 && ipa>=0 && ipa<=100){
+    if(rata>=90){
+      console.log(`Rata-rata = ${rata}
+    Grade = A`);
+     }else if(rata>=80){
+      console.log(`Rata-rata = ${rata}
+    Grade = B`);
+     }else if(rata>=70){
+      console.log(`Rata-rata = ${rata}
+    Grade = C`);
+     }else if(rata>=60){
+      console.log(`Rata-rata = ${rata}
+     Grade = D`);
+     }else{
+      console.log(`Rata-rata = ${rata}
+    Grade = E`);
+     }
   }else{
-    console.log('E');
+    console.log("hanya menerima nilai dari 0 sampai 100");
   }
+
 }else{
     console.log("Data harus number");
 }
