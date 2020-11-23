@@ -1,2 +1,2 @@
 # tugasJavascript
-minggu 2
+tugas 1 minggu 2
